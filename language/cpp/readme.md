@@ -93,20 +93,21 @@ priority_queue<자료형, 구현체, 비교연산자> pq;
 에서 비교연산자를 잘 활용하면, 작은 값으로 구성된 큐도 만들 수 있다.
 
 대표적으로, 알고리즘 문제풀이에 많이 보이는
-
+```
 priority_queue <int, vector<int>, greater<int> > pq;
-
+```
 가 있고,
 
 이런 식으로 선언하면 작은 값이 앞으로 오는 우선순위 큐가 만들어지게 된다.
 
 또한,
-
+```
 struct cmp {
   bool operator()(int a, int b) {
     return a > b;
   }
 };
+```
 
 구조체를 선언하고,
 
@@ -117,7 +118,7 @@ priority_queue <int, vector<int>, cmp> pq;
 우선순위 큐는 이런 식으로 선언된다.
 
 구조체를 활용해서도 많이 사용되는데, 예를 들어보면
-
+```
 //사용할 구조체
 struct s{
   int i;
@@ -141,9 +142,10 @@ struct cmp {
     return a.i > b.i;
   }
 };
+```
 
 비교를 위한 기준을 만들고,
-
+```
 int main() {
   //우선순위큐를 선언할때 <자료형, 구현체, 비교연산자> 로 선언한다.
   priority_queue <s, vector<s>, cmp> pq;
@@ -168,5 +170,5 @@ int main() {
 // 100 z
   return 0;
 }
-
+```
 이렇게 정렬된다. 이건 앞으로 써먹을 일이 있어 보여 이렇게 적어논다.

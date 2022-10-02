@@ -35,3 +35,26 @@ Autowired 어노테이션은, DI를 중점으로 하는 스프링에 매우 적�
 
 Spring IOC 컨테이너가 관리하는 자바 객체입니다. 스프링 컨테이너가 생성한 객체들입니다.
 
+# 스프링 어노테이션
+
+@ initBinder : Web Data Binder 인스턴스를 초기화합니다.
+
+Web Data Binder는, 요청 매개변수를 모델 객체에 바인딩합니다.
+
+@ModelAttribute : 사용자가 요청시 전달하는 값을 오브젝트 형태로 매핑해주는 어노테이션입니다.
+
+@Request param과 달리, 데이터를 객체에 넣어줍니다.
+
+@Autowired : DI를 위해서 사용하는 코드입니다. DI는, 의존관계를 외부에서 주입시켜 사용하는 스프링의 가장 큰 특징인데, Autowired는 사용될 오브젝트에 대한 레퍼런스를 외부에서 제공시켜 생성합니다.
+
+SimpleDataFormat : 원하는 포맷으로 데이터를 변경하는 객체입니다.
+
+
+## SimpleDataFormat 의 주요 메소드
+
+ -format() : Date 타입 객체를 특정 패턴에 따라 문자열로 변환하여 리턴합니다.
+ 
+ -parse() : 문자열을 특정 패턴에 따라 Date 타입 객체로 리턴합니다.
+ 
+ -set Lenient(false) : 문자열을 엄격하게 검사합니다.
+
